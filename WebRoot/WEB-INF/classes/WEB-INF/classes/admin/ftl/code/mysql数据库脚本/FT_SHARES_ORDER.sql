@@ -1,0 +1,25 @@
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `FT_SHARES_ORDER`
+-- ----------------------------
+DROP TABLE IF EXISTS `FT_SHARES_ORDER`;
+CREATE TABLE `FT_SHARES_ORDER` (
+ 		`SHARES_ORDER_ID` varchar(100) NOT NULL,
+		`GMT_CREATE` varchar(32) DEFAULT NULL COMMENT '创建时间',
+		`GMT_MODIFIED` varchar(32) DEFAULT NULL COMMENT '更新时间',
+		`PROD_NAME` varchar(255) DEFAULT NULL COMMENT '商品名称',
+		`PRICE` varchar(22) DEFAULT NULL COMMENT '价格',
+		`STATUS` varchar(30) DEFAULT NULL COMMENT '状态',
+		`TYPE` varchar(55) DEFAULT NULL COMMENT '类型',
+		`TOTAL` varchar(22) DEFAULT NULL COMMENT '总数',
+		`REMAINDER` varchar(22) DEFAULT NULL COMMENT '余数',
+		`NUMBER_CODE` varchar(100) DEFAULT NULL COMMENT '编号',
+		`ORI_PRICE` double(15,2) DEFAULT NULL COMMENT '原价',
+		`PHONE` int(11) NOT NULL COMMENT '手机号',
+		`HE_PHONE` int(11) NOT NULL COMMENT '对方手机号',
+		`SHARES_PROD_ID` varchar(100) DEFAULT NULL COMMENT '股票商品ID',
+		`EVENT` varchar(200) DEFAULT NULL COMMENT '事件',
+  		PRIMARY KEY (`SHARES_ORDER_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
